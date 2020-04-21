@@ -15,7 +15,6 @@ class playScene extends Phaser.Scene {
         
         // Input
         
-        this.input.on('gameobjectdown', this.destroyShip, this);
         this.cursorKeys = this.input.keyboard.createCursorKeys();
         this.spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
         this.W = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
