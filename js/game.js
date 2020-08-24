@@ -4,7 +4,7 @@ var config = {
     width: 1920,
     height: 969,
     backgroundColor: 0x000000,
-    scene: [bootScene, playScene, endScene, menu, options],
+    scene: [LoadingScene, BootScene, PlayScene, EndScene, MenuScene, OptionsScene],
     physics: {default: "arcade"},
     pixelArt: true,
     playerSpeed: 300,

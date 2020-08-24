@@ -1,8 +1,8 @@
-class options extends Phaser.Scene {
-    
+class OptionsScene extends Phaser.Scene {
+
     constructor() {
-        
-        super({ key: "options" });
+
+        super({ key: "optionsScene" });
     }
 
     create() {
@@ -23,29 +23,29 @@ class options extends Phaser.Scene {
         this.buttonAttackDown.setInteractive();
         this.buttonEnemyUp.setInteractive();
         this.buttonEnemyDown.setInteractive();
-        
+
         this.buttonBack.setScale(2, 2);
-        
+
         this.buttonBack.on("pointerup", function() {this.scene.start("menu"); }, this);
         this.buttonAttackUp.on("pointerup", function() {config.bulletTime += 100; }, this);
         this.buttonEnemyUp.on("pointerup", function() {config.enemySpawn += 100; }, this);
 
         this.buttonAttackDown.on("pointerup", function() {
-            
+
             if(config.bulletTime > 100) {
-                
+
                 config.bulletTime -= 100;
             }
-            
+
         }, this);
 
         this.buttonEnemyDown.on("pointerup", function() {
-            
+
             if(config.enemySpawn > 100) {
-                
+
                 config.enemySpawn -= 100;
             }
-            
+
         }, this);
 
     }

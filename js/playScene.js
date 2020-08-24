@@ -1,9 +1,14 @@
-class playScene extends Phaser.Scene {
+class PlayScene extends Phaser.Scene {
 
     constructor() {
 
         super("playScene");
+    }
 
+    preload() {
+
+        this.scene.remove(LoadingScene);
+        this.scene.remove(BootScene);
     }
 
     create() {

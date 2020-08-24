@@ -1,18 +1,9 @@
-class bootScene extends Phaser.Scene {
-
-    constructor() {
-
-        super("bootGame");
-
-    }
+class BootScene extends Phaser.Scene {
 
     preload() {
-        
-        this.load.image("loading", "assets/images/loading.gif");
-        this.add.image(config.width / 2, config.height / 2, "loading");
 
-        this.load.image("background", "assets/images/background.png");
         this.load.image("lightBeam", "assets/images/lightBeam.png");
+        this.load.image("background", "assets/images/background.png");
         this.load.image("buttonPlay", "assets/images/buttonPlay.png");
         this.load.image("buttonOptions", "assets/images/buttonOptions.png");
         
@@ -126,7 +117,8 @@ class bootScene extends Phaser.Scene {
 
     create() {
         
-        this.scene.start("playGame");
+        this.lightBeam = this.add.sprite(config.width / 2, config.height / 2 - 200, "lightBeam");
+        this.lightBeam.setScale(2, 2);
 
         this.anims.create({
         
@@ -237,6 +229,6 @@ class bootScene extends Phaser.Scene {
             
         });
         
-        this.scene.start("menu");
+        this.scene.start("MenuScene");
     }
 }

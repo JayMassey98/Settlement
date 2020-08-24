@@ -1,4 +1,4 @@
-class endScene extends Phaser.Scene {
+class EndScene extends Phaser.Scene {
     
     constructor() {
         
@@ -14,7 +14,7 @@ class endScene extends Phaser.Scene {
         this.restartButton.setInteractive();
         this.restartButton.setScale(2, 2);
         
-        this.restartButton.on("pointerup", function() { this.scene.start("menu"); }, this);
+        this.restartButton.on("pointerup", function() { this.scene.start("menuScene"); }, this);
 
         this.title = this.add.text(30, 30, "Game Over.", {
             fontFamily: 'monospace',
